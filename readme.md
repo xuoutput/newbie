@@ -1,2 +1,3 @@
-newbie project
-this is not a LR
+# newbie project
+
+## 更新常用git指令
