@@ -13,8 +13,19 @@ beforeDestory： destoryed ：当前组件已被删除，清空相关内容
 
 [1]: https://segmentfault.com/a/1190000008010666
 
+<button v-on="click: addTasks"> </button>
+<button v-on="dblclick: addTasks"> </button>
+<button v-on="submit: addTasks"> </button>
+
+<pre>{{$data | json}} </pre>
+
+老外的那个例子来讲些vue基础
 
 ## 路由就是使用 vue-router
+
+
+你也可以自定义一个json的filters ，方法同methods
+有时候删除不一定要定义methods 也可以用filters
 
 ## vuex 状态保存
 
