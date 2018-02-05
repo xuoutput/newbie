@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>vue2getstart</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <!-- <script src="vue.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script src="vue.js"></script>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    
+
     <div class="container" id="tasks">
-        <!-- <div id="tasks"> 不能放这，不然下面的form就不能点击成功-->
-        <div>    
+        <div>
             <div v-show="remaining.length">
                 <!-- <h1>Tasks ({{tasks.length}}) </h1>  改为remaining-->
                 <h1>Tasks ({{remaining.length}}) </h1>
@@ -45,22 +44,22 @@
 
         <!-- <form v-on:submit.prevent="addTask"> 这是对的，配合下面button中没有click 事件 两种都可以用，下面一种是只有修饰符-->
         <!-- <form v-on:submit.prevent> -->
-        <form v-on:submit.prevent="addTask"> 
+        <form v-on:submit.prevent="addTask">
             <div class="form-group">
                 <input  type="text"
-                        v-model="newTask" 
-                        ref="newTask"           
-                        class="form-control" 
+                        v-model="newTask"
+                        ref="newTask"
+                        class="form-control"
                         placeholder="I need to">
 
-            </div> 
-            
-            <!-- <button type="submit" 
-                class="btn btn-primary" 
+            </div>
+
+            <!-- <button type="submit"
+                class="btn btn-primary"
                 v-on:click="addTask">Add Task</button> -->
             <button class="btn btn-primary" >Add Task</button>
             <button v-on:click="completeAll"
-                    class="btn btn-dafault" 
+                    class="btn btn-dafault"
             >
                     Mark All As Completed?
             </button>
